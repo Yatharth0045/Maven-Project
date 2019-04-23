@@ -10,6 +10,6 @@ public class AdditionTest {
     @Test
     public void testAddition() {
         addition = new Addition(10,20);
-        Assert.assertEquals(30, addition.add());
+        Assert.assertEquals(40, addition.add());
     }
 }
