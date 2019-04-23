@@ -1,0 +1,5 @@
+[all]
+amazon-ec ansible_host=13.58.38.209 ansible_connection=ssh ansible_port=22 ansible_host=ec2-user
+
+[amazon]
+amazon-ec

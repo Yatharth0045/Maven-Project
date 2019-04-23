@@ -1,0 +1,10 @@
+---
+- name: install maven
+  hosts: amazon
+  become: yes
+  tasks:
+    - name: Verify maven installation
+      package:
+        name: maven
+        state: present
+...
