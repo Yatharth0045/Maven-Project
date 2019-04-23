@@ -1,10 +1,17 @@
 pipeline {
     agent any
     stages {
+        stage ('Clean Code') {
+            steps {
+                withMaven(maven: 'maven3') {
+                    sh 'mvn clean'
+                }
+            }
+        }
         stage ('Compile Code') {
             steps {
                 withMaven(maven: 'maven3') {
-                    sh 'mvn clean compile'
+                    sh 'mvn compile'
                 }
             }
         }
