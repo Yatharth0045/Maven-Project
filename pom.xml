@@ -26,6 +26,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
+                <version>${maven_shade_plugin_version}</version>
                 <executions>
                     <execution>
                         <goals>
@@ -46,6 +47,7 @@
         </plugins>
     </build>
     <properties>
+        <maven_shade_plugin_version>3.2.1</maven_shade_plugin_version>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
         <junit_version>4.13-beta-1</junit_version>
