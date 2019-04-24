@@ -22,5 +22,19 @@ pipeline {
                 }
             }
         }
+        stage ('Package Code') {
+            steps {
+                withMaven(maven: 'maven3') {
+                    sh 'mvn package'
+                }
+            }
+        }
+        stage ('Generate Artifact') {
+            steps {
+                withMaven(maven: 'maven3') {
+                    sh 'mvn install'
+                }
+            }
+        }
     }
 }
