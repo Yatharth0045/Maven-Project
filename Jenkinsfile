@@ -36,5 +36,10 @@ pipeline {
                 }
             }
         }
+        stage ('Jacoco Coverage Report') {
+            steps {
+                jacoco exclusionPattern: 'Main.class'
+            }
+        }
     }
 }
