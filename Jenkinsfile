@@ -8,27 +8,6 @@ pipeline {
                 }
             }
         }
-        stage ('Compile Code') {
-            steps {
-                withMaven(maven: 'maven3') {
-                    sh 'mvn compile'
-                }
-            }
-        }
-        stage ('Test Code') {
-            steps {
-                withMaven(maven: 'maven3') {
-                    sh 'mvn test'
-                }
-            }
-        }
-        stage ('Package Code') {
-            steps {
-                withMaven(maven: 'maven3') {
-                    sh 'mvn package'
-                }
-            }
-        }
         stage ('Generate Artifact') {
             steps {
                 withMaven(maven: 'maven3') {
