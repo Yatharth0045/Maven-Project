@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	environment {
-		HELLO_MESSAGE = ""Welcome to Demo CapStone Project""
+		HELLO_MESSAGE = "Welcome to Demo CapStone Project"
 	}
 	stages {
 		stage ('Clean Code') {
