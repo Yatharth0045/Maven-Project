@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        HELLO_MESSAGE = ""Welcome to Demo CapStone Project""
+    }
     stages {
         stage ('Clean Code') {
             steps {
@@ -20,5 +23,6 @@ pipeline {
                 jacoco exclusionPattern: 'Main.class'
             }
         }
+        stage ()
     }
 }
