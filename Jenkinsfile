@@ -33,8 +33,6 @@ pipeline {
 		success {
 			mail bcc: '', body: 'The build is successful', cc: '', from: '', replyTo: '', subject: 'Build Success', to: 'yatharth0045@gmail.com'
 		}
-	}
-	post {
 		unsuccessful {
 			mail bcc: '', body: 'The build is unsuccessful', cc: '', from: '', replyTo: '', subject: 'Build Success', to: 'yatharth0045@gmail.com'
 		}
