@@ -20,7 +20,7 @@ pipeline {
 		}
 		stage ('Jacoco Coverage Report') {
 			steps {
-				jacoco exclusionPattern: 'Main.class', sourceExclusionPattern: 'Main.java'
+				jacoco changeBuildStatus: true, exclusionPattern: '**/*Main.class'
 			}
 		}
 		stage ('Archive Artifact') {
