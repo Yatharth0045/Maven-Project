@@ -7,7 +7,7 @@ public class Subtraction {
         this.num2 = num2;
     }
 
-    int add(){
+    int subtract(){
         return num1-num2;
     }
 }
