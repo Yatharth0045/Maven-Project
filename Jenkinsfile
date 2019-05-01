@@ -13,8 +13,17 @@ pipeline {
 		}
 		stage ('Generate Artifact') {
 			steps {
-				withMaven(maven: 'maven3') {
-					sh 'mvn clean install'
+				parallel {
+				    "firstTask" : {
+				        withMaven(maven: 'maven3') {
+				            sh 'mvn -Dtest=Addition'
+				        }
+				    },
+				    "secondTask" : {
+                        withMaven(maven: 'maven3') {
+                    	    sh 'mvn -Dtest=Addition'
+                        }
+                    }
 				}
 			}
 		}
