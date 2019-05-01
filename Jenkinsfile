@@ -28,14 +28,6 @@ pipeline {
 				archiveArtifacts 'target/SampleMavenProject-1.0-SNAPSHOT-shaded.jar'
 			}
 		}
-		stage ('Deploy on ec2 instance') {
-			when {
-				branch 'master'
-			}
-			steps {
-				
-			}
-		}
 	}
 	post {
 		success {
