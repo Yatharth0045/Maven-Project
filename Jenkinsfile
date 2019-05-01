@@ -11,7 +11,7 @@ pipeline {
 				}
 			}
 		}
-		stage ('Generate Artifact') {
+		stage ('Run Test Cases') {
 		    parallel {
 		        stage ('Test Addition') {
 		            steps {
