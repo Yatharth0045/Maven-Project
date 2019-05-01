@@ -12,20 +12,22 @@ pipeline {
 			}
 		}
 		stage ('Generate Artifact') {
-			steps {
-				parallel {
-				    firstTask: {
-				        withMaven(maven: 'maven3') {
-				            sh 'mvn -Dtest=Addition'
-				        }
-				    },
-				    secondTask: {
-                        withMaven(maven: 'maven3') {
-                    	    sh 'mvn -Dtest=Addition'
-                        }
-                    }
-				}
-			}
+		    parallel {
+		        stage ('Test Addition') {
+		            steps {
+		                withMaven(maven: 'maven3') {
+		                    sh 'mvn -Dtest=Addition'
+		                }
+		            }
+		        }
+		        stage ('Test Subtraction') {
+		            steps {
+		                withMaven(maven: 'maven3') {
+		                    sh 'mvn -Dtest=Subtraction'
+		                }
+		            }
+		        }
+		    }
 		}
 		stage ('Jacoco Coverage Report') {
 			steps {
