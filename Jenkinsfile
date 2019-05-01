@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	environment {
-		HELLO_MESSAGE = "Welcome to Demo CapStone Project"
+		HELLO_MESSAGE = ${hello}
 	}
 	stages {
 		stage ('Clean Code') {
@@ -26,6 +26,14 @@ pipeline {
 		stage ('Archive Artifact') {
 			steps {
 				archiveArtifacts 'target/SampleMavenProject-1.0-SNAPSHOT-shaded.jar'
+			}
+		}
+		stage ('Deploy on ec2 instance') {
+			when {
+				branch 'master'
+			}
+			steps {
+				
 			}
 		}
 	}
