@@ -16,14 +16,14 @@ pipeline {
 		        stage ('Test Addition') {
 		            steps {
 		                withMaven(maven: 'maven3') {
-		                    sh 'mvn -Dtest=Addition test'
+		                    sh 'mvn -Dtest=AdditionTest test'
 		                }
 		            }
 		        }
 		        stage ('Test Subtraction') {
 		            steps {
 		                withMaven(maven: 'maven3') {
-		                    sh 'mvn -Dtest=Subtraction test'
+		                    sh 'mvn -Dtest=SubtractionTest test'
 		                }
 		            }
 		        }
