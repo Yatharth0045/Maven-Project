@@ -14,12 +14,12 @@ pipeline {
 		stage ('Generate Artifact') {
 			steps {
 				parallel {
-				    "firstTask" : {
+				    firstTask: {
 				        withMaven(maven: 'maven3') {
 				            sh 'mvn -Dtest=Addition'
 				        }
 				    },
-				    "secondTask" : {
+				    secondTask: {
                         withMaven(maven: 'maven3') {
                     	    sh 'mvn -Dtest=Addition'
                         }
