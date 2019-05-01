@@ -29,6 +29,13 @@ pipeline {
 		        }
 		    }
 		}
+		stage ('Generate Artifact') {
+			steps {
+				withMaven(maven: 'maven3') {
+					sh 'mvn package'
+				}
+			}
+		}
 		stage ('Jacoco Coverage Report') {
 			steps {
 				jacoco changeBuildStatus: true, exclusionPattern: '**/*Main.class'
