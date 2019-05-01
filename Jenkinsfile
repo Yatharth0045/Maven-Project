@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	environment {
-		HELLO_MESSAGE = ${hello}
+		HELLO_MESSAGE = "${hello}"
 	}
 	stages {
 		stage ('Clean Code') {
