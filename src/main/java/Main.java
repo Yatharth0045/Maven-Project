@@ -14,5 +14,7 @@ public class Main {
 
         Subtraction sub = new Subtraction(50, 30);
         System.out.println("Diff is : " + sub.subtract());
+
+        System.out.println("This is a demo java project");
     }
 }
