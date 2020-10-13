@@ -96,7 +96,7 @@
         <maven_shade_plugin_version>3.2.1</maven_shade_plugin_version>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
-        <junit_version>4.13-beta-1</junit_version>
+        <junit_version>4.13.1</junit_version>
         <jmockit_version>1.45</jmockit_version>
         <jacoco_version>0.8.3</jacoco_version>
     </properties>
